@@ -1,0 +1,2 @@
+# playwright-learning-journey
+🚀 A hands-on journey of learning and mastering Playwright for end-to-end automation testing. This repository documents my daily progress, practice projects, and real-world test automation examples — covering UI, API, cross-browser, and advanced framework setups.  This way, it looks like:  You’re serious about learning.  You’re documenting growth.  Recruiters can see clean progress → from beginner → advanced.
