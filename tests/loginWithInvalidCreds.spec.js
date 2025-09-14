@@ -6,14 +6,12 @@ test("Valid Login", async ({ page }) => {
 
   // Enter credentials
   await page.getByPlaceholder("Username").type("Admin");
-  await page.getByPlaceholder("Password").type("admin123");
+  await page.getByPlaceholder("Password").type("admin");
 
   // Click login button
   await page.locator("//button[@type='submit']").click();
 
-  // Wait for debugging (not recommended in real tests)
-  await page.waitForTimeout(5000);
+  const errorMsg = await page.locator("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']").textContent();
 
-  // Verify that user is redirected to dashboard
-  await expect(page).toHaveURL(/dashboard/);
+  await expect(errorMsg.includes("Invalid")).toBeTruthy();
 });
