@@ -15,7 +15,4 @@ test("Select the Dropdown", async function ({page}){
     //to verify that perticular value is present in dropdown or not 
     const values = await page.locator("#state").textContent();
     await expect(values.includes("Goa")).toBeTruthy();
-
-
-
 })
